@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock %}</title>
+    {% load static tailwind_tags %}
+    {% tailwind_css %}
+</head>
+<body>
+    <!-- WHOLE NAVIGATION BAR -->
+    <header class="relative w-full px-10 py-2 text-white h-30 xl:py-6 xl:px-10">
+        <!-- BACKGGOUND -->
+        <div class='absolute inset-0 z-0'>
+            <img 
+                src="{% static 'landingpics\headerbg.png' %}" class="w-full h-20 xl:h-[105px]"
+                alt='background'
+            />
+        </div>
+
+        <!-- LOGO -->
+        <div class="relative z-10 flex items-center justify-between w-full">
+            <a href="/">
+                <img src="{% static 'landingpics\logo.svg' %}" alt="logo" class="h-14"/>
+            </a>
+
+            
+            
+            <!-- {/* Hidden if small screens */} -->
+            <div class="items-center hidden gap-10 xl:flex">
+                {% include 'landingpage/components/navigations.html' %} 
+
+                <a href="">
+                    <button class='px-10 py-1 mx-12 font-medium bg-transparent border-2 rounded-full border-white2 hover:bg-white2 hover:border-maroon hover:text-maroon'>
+                            Login
+                    </button>
+                </a>
+            </div>
+
+
+            <!-- {/* Hidden if dagko screen */} -->
+            <div class='xl:hidden'>
+                <!-- MOBILE NAVIGATION -->
+                 {% include 'landingpage/components/mobileNav.html' %}
+            </div>
+            
+        </div>
+    </header>
+
+    <main>
+        {% block content %}
+        <!-- Page-specific content goes here -->
+        {% endblock %}
+    </main>
+
+    <footer  class='relative flex justify-center w-full font-medium pt-28 py-14 text-maroon bg-gradient-to-r from-dmaroon to-maroon'>
+
+        <!-- {/* BACKGROUND */} -->
+        <div  class='absolute inset-0 z-0'>
+            <img 
+                src="{% static 'landingpics\footerbg.png' %}"
+                alt='background'
+                class="w-full h-full"
+            />
+        </div>
+        <!-- {/* cCONTENT*/} -->
+        <div  class="relative z-10 grid justify-between w-full grid-cols-2 gap-10 xl:flex">
+
+          <!-- {/* FIRST */} -->
+          <div  class='flex flex-col gap-2 mx-auto'>
+            <img 
+              src="{% static 'landingpics\logocolored.svg' %}"
+              width={150}
+              height={150}
+            />
+            <p  class='mb-5'>
+              &copy; Copyright 2024 J3 Technologies. <br /> Limited | All Rights Reserved.
+            </p>
+
+            <div  class='flex gap-8 mx-auto text-3xl'>
+              <a href="/">
+                <img src="{% static 'icons/facebook.svg' %}" class="w-8 h-8" alt="">
+              </a>
+
+              <a href="/">
+                <img src="{% static 'icons/twitterx.svg' %}" class="w-8 h-8" alt="">
+              </a>
+
+              <a href="/">
+                <img src="{% static 'icons/github.svg' %}" class="w-8 h-8" alt="">
+              </a>
+            </div>
+          </div>
+
+          <!-- {/* SECOND */} -->
+          <div class='flex flex-col gap-2 mx-auto'>
+            <h1 class='text-xl font-bold'>Product</h1>
+            <p>Website</p>
+          </div>
+    
+          <!-- {/* THIRD */} -->
+          <div class='flex flex-col gap-2 mx-auto'>
+            <h1 class='text-xl font-bold'>Legal</h1>
+            <p>Terms and Conditions</p>
+            <p>Privacy Policy</p>
+            <p>FAQS</p>
+          </div>
+
+          <!-- {/* FOURTH */} -->
+          <div  class='flex flex-col gap-2 mx-auto'>
+            <h1  class='text-xl font-bold'>Contact Us</h1>
+
+            <div  class='flex items-center gap-2'>
+              <FaLocationDot  class='text-xl'/>
+              <p>Cebu City, Philippines</p>
+            </div>
+
+            <div  class='flex items-center gap-2'>
+              <GrMail  class='text-xl'/>
+              <p>elected@cit.edu</p>
+            </div>
+
+            <div  class='flex items-center gap-2'>
+              <FaPhone  class='text-xl'/>
+              <p>+63 987 654 3210</p>
+            </div>
+          </div>
+
+        </div>
+
+    </footer>
+</body>
+</html>

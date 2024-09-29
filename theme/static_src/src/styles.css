@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Define Samsung Sharp Sans font faces */
+@font-face {
+    font-family: 'Samsung Sharp Sans';
+    src: url('/static/fonts/samsungsharpsans-bold.otf') format('opentype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Samsung Sharp Sans';
+    src: url('/static/fonts/samsungsharpsans-medium.otf') format('opentype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Samsung Sharp Sans';
+    src: url('/static/fonts/samsungsharpsans.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@layer base {
+    body {
+        /* Apply dayon ig type nimo para di na mag mano2 ug usab sa tailwind */
+        @apply font-samsung;
+        @apply leading-loose bg-white2 text-itom;
+    }
+}

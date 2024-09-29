@@ -1,0 +1,140 @@
+{% extends 'base.html' %}
+
+{% block title %}About Us {% endblock %}
+
+{% block content %}
+<section class='bg-white2'>
+    <!-- {/* ABOUT US TEXT */} -->
+    <div
+    class='container flex flex-col items-center justify-center h-full gap-6 mx-auto my-24 text-center'
+    >
+    <h1  class='text-6xl font-bold text-maroon '>About Us</h1>
+        <p  class='text-3xl font-semibold'>
+        <span  class='text-maroon'>ElectEd</span> is an <span  class='text-maroon'>Advanced Online Voting Platform </span> 
+        built for educational institutions. Our mission is to empower students with a secure, transparent, and easy-to-use system 
+        that brings the entire election process online.
+        </p>
+    </div>
+
+
+
+    <!-- {/* MEET THE TEAM  */} -->
+    <div  class='flex flex-col items-center justify-center gap-3 pt-20 text-center bg-gradient-to-r from-dmaroon to-maroon text-white2'>
+        <h1  class='text-6xl font-bold'>Meet the Team</h1>
+
+        <p  class='text-2xl mb-14 font-medium w-[45%]'>
+            Our core team of voting software experts 
+            empowers you to run secure, efficient elections online with ElectEd.
+        </p>
+
+        <!-- {/* CARDS */} -->
+        <div  class='container grid grid-cols-2 gap-8 mb-28 xl:px-20 xl:grid-cols-3'>
+            <Card 
+                source="/dobby.png"
+                name="Dobby"
+                details="Hi, I am dobby and i am gwapo basjdknasdlak"
+            />
+
+            <Card 
+                source="/guwang.png"
+                name="Dobby"
+                details="Hi, I am dobby and i am gwapo basjdknasdlak"
+            />
+
+            <Card 
+                source="/dobby.png"
+                name="Dobby"
+                details="Hi, I am dobby and i am gwapo basjdknasdlak"
+            />
+
+            <Card 
+                source="/dobby.png"
+                name="Dobby"
+                details="Hi, I am dobby and i am gwapo basjdknasdlak"
+            />
+
+            <Card 
+                source="/dobby.png"
+                name="Dobby"
+                details="Hi, I am dobby and i am gwapo basjdknasdlak"
+            />
+
+            <Card 
+                source="/dobby.png"
+                name="Dobby"
+                details="Hi, I am dobby and i am gwapo basjdknasdlak"
+            />
+        </div>
+
+    </div>
+
+
+
+    <!-- {/* HOW WE WORK */} -->
+    <div class='w-full pt-24 bg-white2 text-maroon'>
+        <h1  class='mb-20 text-6xl font-bold text-center'>How We Work</h1>
+        <!-- {/* 3DIVS */} -->
+        <div  class='flex flex-col justify-center gap-20 mx-20 mb-20 xl:flex-row'>
+        <!-- {/* FIRST */} -->
+        <div  class='flex flex-col items-center w-full text-center'>
+            <BsCheckCircle  class='text-5xl font-bold'/>
+            <h1  class='mb-2 text-3xl font-semibold'>
+                Our Approach    
+            </h1>
+            <p  class='text-xl font-medium'>
+                At ElectEd, we combine cutting-edge technology with a deep understanding of educational needs to deliver a 
+                voting platform that is both secure and user-friendly. Our approach focuses on simplicity, reliability, and 
+                accessibility, ensuring that the electoral process is seamless for every student and institution.
+            </p>
+        </div>
+
+        <!-- {/* SECOND */} -->
+        <div  class='flex flex-col items-center w-full text-center'>
+            <IoRocketOutline  class='text-5xl font-bold'/>
+            <h1  class='mb-2 text-3xl font-semibold'>
+                Our Mission
+            </h1>
+            <p class='text-xl font-medium'>
+                Our mission is to transform the way student elections are conducted by providing a platform that makes voting 
+                accessible, secure, and transparent. We are committed to empowering students by simplifying the voting process 
+                and enhancing their engagement in school governance.
+            </p>
+        </div>
+
+        <!-- {/* THIRD */} -->
+        <div  class='flex flex-col items-center w-full text-center'>
+            <FaRegStar  class='text-5xl font-bold'/>
+            <h1  class='mb-2 text-3xl font-semibold'>
+                Our Values
+            </h1>
+            <p  class='text-xl font-medium'>
+                At ElectEd, we uphold the highest standards of integrity, ensuring that every election is conducted with transparency and security. 
+                We believe in accessibility, striving to make sure every student has the opportunity to participate, regardless of their location or 
+                technical skills. Our commitment to innovation drives us to stay at the forefront of technology, constantly improving our platform to 
+                provide the best voting experience possible.
+            </p>
+        </div>
+        </div>
+    </div>
+
+
+
+        <!-- {/* JOIN OUR TEAM */} -->
+    <div  class='flex flex-col items-center justify-center pt-24 text-center bg-gradient-to-r from-dmaroon to-maroon text-white2'>
+        <div
+        class='container'
+        >
+        <h1  class='text-6xl font-bold mb-7'>Join Our Team</h1>
+
+        <p  class='mb-4 text-xl font-medium'>
+            Be part of a dynamic group dedicated to revolutionizing student elections with innovative technology and a commitment to excellence.
+        </p>
+
+        <button  class='px-8 py-2 mb-8 text-xl font-bold rounded-full bg-white2 text-maroon'>
+            JOIN OUR TEAM
+        </button>
+        </div>
+    </div>
+
+</section>
+{% endblock %}

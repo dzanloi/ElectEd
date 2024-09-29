@@ -1,0 +1,41 @@
+<nav class="flex gap-24">
+        <a 
+            href="{% url 'home' %}" 
+            class="{% if request.path == '/' %}border-b-2 border-white{% endif %} capitalize font-medium hover:text-white/70 transition-all"
+        >
+            Home
+        </a>
+
+        <a 
+            href="{% url 'about' %}" 
+            class="
+            {% if request.path == '/about/' %}
+                border-b-2 border-white
+            {% endif %} 
+            capitalize font-medium hover:text-white/70 transition-all"
+        >
+            About
+        </a>
+
+        <a 
+            href="{% url 'contact' %}" 
+            class="
+            {% if request.path == '/contact/' %}
+                border-b-2 border-white
+            {% endif %} 
+            capitalize font-medium hover:text-white/70 transition-all"
+        >
+            Contact Us
+        </a>
+
+        <a 
+            href="{% url 'faqs' %}" 
+            class="
+            {% if request.path == '/faqs/' %}
+                border-b-2 border-white
+            {% endif %} 
+            capitalize font-medium hover:text-white/70 transition-all"
+        >
+            FAQS
+        </a>
+</nav>  

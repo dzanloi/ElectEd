@@ -1,0 +1,121 @@
+{% extends 'base.html' %}
+
+{% block title %}Home {% endblock %}
+{% load static %}
+{% block content %}
+    <div  class="flex justify-between w-full h-screen px-28">
+
+        <!-- {/* TEXT */} -->
+        <div class="container flex flex-col items-center justify-center w-full">
+            <h1 class="mb-16 text-4xl font-semibold leading-tight text-center md:text-5xl lg:text-7xl">
+                <span class="text-maroon">School's #1</span> Trusted Platform <br>for Student Elections in the Philippines
+            </h1>
+
+            <a href="">
+                <buttons 
+                    class="px-20 py-5 mb-8 text-xl font-medium border-2 rounded-full bg-gradient-to-b from-maroon to-dmaroon text-white2 w-fit"
+                >
+                    Vote Now
+                </button>
+            </a>
+        </div>
+        
+
+
+        <!-- {/* GUWANG */} -->
+        <!-- <div class="hidden mx-auto lg:flex">
+            <img src="{% static 'landingpics\guwang.png' %}"/>
+        </div> -->
+    </div>
+
+
+<!-- {/* 3 STEPS */} -->
+  <div  class="flex flex-col justify-center w-full mx-auto lg:flex-row bg-maroon text-white2">
+		<div  class="flex flex-col p-10 mx-auto my-8">
+			Step 1:
+			<h1  class="text-3xl font-semibold">SIGN UP</h1>
+		</div>
+
+		<div  class="flex flex-col p-10 mx-auto my-8">
+			Step 2:
+			<h1  class="text-3xl font-semibold">VOTE</h1>
+		</div>
+
+		<div  class="flex flex-col p-10 mx-auto my-8">
+			Step 3:
+			<h1  class="text-3xl font-semibold">VIEW ELECTION RESULT</h1>
+		</div>
+	</div>
+
+    <!-- {/* TEXT AFTER 3 STEPS */} -->
+			<div class="bg-[#F0EDED] text-maroon p-14 items-center flex flex-col">
+				<h1 class="w-full my-10 text-4xl font-bold text-center">
+					Fast, Secure, and Accessible
+				</h1>
+
+				<p class="text-center font-medium text-xl mb-10 w-[80%]">
+					ElectEd is your school’s premier online platform for 
+					electing student representatives. Simplifying the voting process, <br /> 
+					we ensure that every student's voice is heard and every vote is 
+					counted with utmost security and ease.
+				</p>
+			</div>
+
+
+
+    <!-- FEATURES -->
+    <section  class='w-full h-full text-white p-14 bg-gradient-to-r from-dmaroon to-maroon'>
+        <!-- {/* CONTAINER */} -->
+        <div class="container mx-auto">
+  
+          <!-- {/* TEXT CONTENT */} -->
+          <div  class='flex flex-col gap-10'>
+              <h1  class='text-4xl font-bold text-center'>
+                Our Features
+              </h1>
+  
+              <p  class='mb-8 text-xl font-medium text-center'>
+                  Explore the features that allow your school to conduct secure, 
+                  anonymous, <br /> and accessible elections entirely online, ensuring 
+                  every student’s voice is heard with ease and confidence.
+              </p>
+          </div>
+      
+  
+          <!-- {/* CARDS CONTENT */} -->
+          <div  class='grid grid-cols-1 md:grid-cols-2 gap-[60px]'>
+            <!-- {/* <div  class='flex-col justify-center flex-1 gap-6 group'>
+            </div> */} -->
+            <div
+               class='transition-all duration-75'
+            >
+              <img 
+                src="{% static 'landingpics\feature1.png' %}"
+                width={500}
+                 class='hover:transition-all'
+                height={500}
+              />
+            </div>
+  
+              <img 
+                src="{% static 'landingpics\feature2.png' %}"
+                width={500}
+                height={500}
+              />
+  
+              <img 
+                src="{% static 'landingpics\feature3.png' %}"
+                width={500}
+                height={500}
+              />
+  
+              <img 
+                src="{% static 'landingpics\feature4.png' %}"
+                width={500}
+                height={500}
+              />
+          </div>
+        </div>
+  
+      </section>
+{% endblock %}
